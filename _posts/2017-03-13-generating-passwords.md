@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Generating Passwords"
-date:   2017-05-28 17:06:12 -0600
+date:   2017-03-13 17:06:12 -0600
 categories: passwords
 ---
 
