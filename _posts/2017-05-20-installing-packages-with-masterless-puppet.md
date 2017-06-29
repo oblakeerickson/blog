@@ -2,7 +2,6 @@
 layout: post
 title: "Installing Packages with Masterless Puppet"
 date: 2017-05-20 06:00:00
-categories: puppet
 ---
 
 My first post on [Masterless
