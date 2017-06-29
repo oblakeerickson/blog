@@ -2,7 +2,6 @@
 layout: post
 title:  "Nobody will Train You but You"
 date:   2017-03-01 01:00:00 -0600
-categories: 
 ---
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/-0yajJLVbzw"

@@ -2,7 +2,6 @@
 layout: post
 title:  "Masterless Puppet on Ubuntu 16.04"
 date:   2017-03-06 01:00:00 -0600
-categories: puppet
 ---
 
 This tutorial is adapted from [this

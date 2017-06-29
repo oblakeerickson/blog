@@ -5,7 +5,7 @@ date: 2017-05-20 06:00:00
 ---
 
 My first post on [Masterless
-Puppet](https://blog.blakeerickson.com/t/masterless-puppet-on-ubuntu-16-04/13)
+Puppet](/2017/03/06/masterless-puppet-on-ubuntu-16-04.html)
 walked us through setting up puppet in a masterless setup, but we didn't
 actually use it to install any software package or files to configure our
 server, which is the whole point of puppet, so let's do that now.
