@@ -17,24 +17,24 @@ You can setup a fresh Ubuntu 16.04 box on
 
 On a fresh Ubuntu 16.04 box run [these
 commands](https://docs.puppet.com/puppet/latest/puppet_collections.html#apt-based-systems)
-so that we can install puppet:
+as root so that we can install puppet:
 
 ```
 wget https://apt.puppetlabs.com/puppetlabs-release-pc1-xenial.deb
-sudo dpkg -i puppetlabs-release-pc1-xenial.deb
-sudo apt update
+dpkg -i puppetlabs-release-pc1-xenial.deb
+apt update
 ```
 
 Then install puppet and git with this command:
 
 ```
-sudo apt install puppet git-core
+apt install puppet git-core
 ```
 
 ### Step 2: Setting up the git repo
 
 We are going to add a deploy key to a new GitHub repository that we will create
-in just a bit but first we need to create a ssh on our new Ubuntu box.
+in just a bit but first we need to create a ssh key on our new Ubuntu box.
 
 Run this command and press 'enter' several times to accept all the defaults:
 
@@ -42,7 +42,7 @@ Run this command and press 'enter' several times to accept all the defaults:
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ```
 
-Once you key has been created let's copy it so that we can add it to GitHub:
+Once your key has been created let's copy it so that we can add it to GitHub:
 
 ```
 cat ~/.ssh/id_rsa.pub
@@ -66,8 +66,7 @@ git config --global core.editor "vim"
 ### Step 3: Pushing the Initial Puppet Configuration
 
 ```
-cd /etc/
-cd puppet
+cd /etc/puppet
 git init
 git add .
 git commit -m "initial commit"
@@ -102,28 +101,29 @@ Add this to the `init.pp` file:
 
 ```
 class cron-puppet {
-    file { 'post-hook':
-        ensure  => file,
-        path    => '/etc/puppet/.git/hooks/post-merge',
-        source  => 'puppet:///modules/cron-puppet/post-merge',
-        mode    => 0755,
-        owner   => root,
-        group   => root,
-    }
-    cron { 'puppet-apply':
-        ensure  => present,
-        command => "cd /etc/puppet ; /usr/bin/git pull",
-        user    => root,
-        minute  => '*/1',
-        require => File['post-hook'],
-    }
+  file { 'post-hook':
+    ensure => file,
+    path   => '/etc/puppet/.git/hooks/post-merge',
+    source => 'puppet:///modules/cron-puppet/post-merge',
+    mode   => 0755,
+    owner  => root,
+    group  => root,
+  }
+  cron { 'puppet-apply':
+    ensure  => present,
+    command => "cd /etc/puppet; /usr/bin/git pull origin master",
+    user    => root,
+    minute  => '*/1',
+    require => File['post-hook'],
+  }
 }
+
 ```
 
 Now edit `cron-puppet/files/post-merge`:
 
-```
 
+```
 #!/bin/bash -e
 ## Run Puppet locally using puppet apply
 /usr/bin/puppet apply /etc/puppet/manifests/site.pp
@@ -131,11 +131,11 @@ Now edit `cron-puppet/files/post-merge`:
 ## Log status of the Puppet run
 if [ $? -eq 0 ]
 then
-    /usr/bin/logger -i "Puppet has run successfully" -t "puppet-run"
-    exit 0
+  /usr/bin/logger -i "Puppet has run successfully" -t "puppet-run"
+  exit 0
 else
-    /usr/bin/logger -i "Puppet has ran into an error, please run Puppet manually" -t "puppet-run"
-    exit 1
+  /usr/bin/logger -i "Puppet has ran into an error, please run Puppet manually" -t "puppet-run"
+  exit 1
 fi
 
 ```
@@ -145,14 +145,14 @@ manifest, which is canonically found at /etc/puppet/manifests/site.pp.
 
 ```
 node default {
-    include cron-puppet
+  include cron-puppet
 }
 ```
 
 Now run:
 
 ```
-sudo puppet apply /etc/puppet/manifests/sites.pp
+puppet apply /etc/puppet/manifests/site.pp
 ```
 
 and hopefully you don't see any errors.
