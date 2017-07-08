@@ -19,7 +19,9 @@ generates a random password and adds it to my clipboard.
 
 Now in any open terminal that I have I can just type:
 
-    pass
+```
+pass
+```
 
 and a new password is instantly in my clipboard.
 
@@ -27,7 +29,7 @@ and a new password is instantly in my clipboard.
 Here is the code for my ruby file which generates the random password:
 
 
-```
+```ruby
 require 'securerandom'
 
 class Password

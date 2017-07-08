@@ -59,7 +59,7 @@ There are no differences in this section
 
 Replace the text inside of `app/templates/application.hbs` with the following:
 
-```
+```html
 <section id="todoapp">
   <header id="header">
     <h1>todos</h1>
@@ -124,13 +124,13 @@ We've already obtained Ember.js and dependencies! Move on to the next section.
 
 Inside `app/router.js` file add this line to the `Router.map` body:
 
-```
+```javascript
 this.resource('todos', { path: '/' });
 ```
 
 The `app/router.js` file should look like this now:
 
-```
+```javascript
 import Ember from 'ember';
 import config from './config/environment';
 
@@ -147,7 +147,7 @@ export default Router;
 
 From the terminal type:
 
-```
+```javascript
 ember generate route todos
 ```
 
@@ -155,9 +155,11 @@ This will create a new file for us inside of `app/templates/todos.hbs`. Now copy
 
 Then replace the entire contents of the `app/templates/application.hbs` file with:
 
-```
+{% raw %}
+```handlebars
 {{outlet}}
 ```
+{% endraw %}
 
 Now go back to your web browser and make sure everything still loaded okay.
 
@@ -165,11 +167,13 @@ Now go back to your web browser and make sure everything still loaded okay.
 
 From the terminal type:
 
-    ember generate model todo
+```
+ember generate model todo
+```
 
 Now open up `js/models/todo.js` and add the `title` and `isCompleted` attributes:
 
-```
+```javascript
 import DS from 'ember-data';
 
 export default DS.Model.extend({
@@ -188,7 +192,7 @@ ember generate adapter application
 
 and inside the `app/adapters/application.js` file replace `RESTAdapter` with `FixtureAdapter`.
 
-```
+```javascript
 import DS from 'ember-data';
 
 export default DS.FixtureAdapter.extend();
@@ -196,7 +200,7 @@ export default DS.FixtureAdapter.extend();
 
 Now go back to our model `app/models/todo.js` and add a fixture to it. Also, make sure to create the `Todo` variable. The file should now look like:
 
-```
+```javascript
 import DS from 'ember-data';
 
 var Todo = DS.Model.extend({
@@ -228,7 +232,7 @@ export default Todo;
 
 Inside of `app/routes/todos.js` and place the following code:
 
-```
+```javascript
 import Ember from 'ember';
 
 export default Ember.Route.extend({
@@ -240,7 +244,8 @@ export default Ember.Route.extend({
 
 Now we need to add some handlebar code to our `app/templates/todos.hbs` template so that it can dynamically load the contents of our fixture.
 
-```
+{% raw %}
+```handlebars
 <!--- ... additional lines truncated for brevity ... -->
 <ul id="todo-list">
   {{ "{{#each" }}}}
@@ -253,12 +258,14 @@ Now we need to add some handlebar code to our `app/templates/todos.hbs` template
 </ul>
 <!--- ... additional lines truncated for brevity ... -->
 ```
+{% endraw %}
 
 ## Displaying a Model's Complete State
 
 Update the `<li>` tag in `app/templates/todos.hbs`:
 
-```
+{% raw %}
+```handlebars
 <!--- ... additional lines truncated for brevity ... -->
 <li {{bind-attr class="isCompleted:completed"}}>
   <input type="checkbox" class="toggle">
@@ -267,18 +274,21 @@ Update the `<li>` tag in `app/templates/todos.hbs`:
 </li>
 <!--- ... additional lines truncated for brevity ... -->
 ```
+{% endraw %}
 
 ## Creating a New Model Instance
 
 At the top of `app/templates/todos.hbs` replace the new todo `<input>` with an `{{ "{{input" }}}}` helper:
 
-```
+{% raw %}
+```handlebars
 <!--- ... additional lines truncated for brevity ... -->
 <h1>todos</h1>
 {{input type="text" id="new-todo" placeholder="What needs to be done?"
           value=newTitle action="createTodo"}}
 <!--- ... additional lines truncated for brevity ... -->
 ```
+{% endraw %}
 
 Now we need to create a new controller for our todos so that we can something to handle our actions:
 
@@ -288,7 +298,7 @@ ember generate controller todos --type=array
 
 This will generate a new file for us in `app/controllers/todos.js`. Edit this file so that it now looks like:
 
-```
+```javascript
 import Ember from 'ember';
 
 export default Ember.ArrayController.extend({
@@ -318,7 +328,8 @@ export default Ember.ArrayController.extend({
 
 Inside the `app/templates/todos.hbs` template replace the `<input>` tag for the checkbox with:
 
-```
+{% raw %}
+```handlebars
 {{#each}}
   <li {{bind-attr class="isCompleted:completed"}}>
     {{input type="checkbox" checked=isCompleted class="toggle"}}
@@ -327,6 +338,7 @@ Inside the `app/templates/todos.hbs` template replace the `<input>` tag for the 
   </li>
 {{/each}}
 ```
+{% endraw %}
 
 Now lets create another controller:
 
@@ -336,7 +348,7 @@ ember generate controller todo --type=object
 
 Inside of the `app/controllers/todo.js` file place the following code:
 
-```
+```javascript
 import Ember from 'ember';
 
 export default Ember.ObjectController.extend({
@@ -360,17 +372,19 @@ export default Ember.ObjectController.extend({
 
 Update the static count inside the `todo-count` span in the `app/templates/todos.hbs` template:
 
-```
+{% raw %}
+```handlebars
 <!--- ... additional lines truncated for brevity ... -->
 <span id="todo-count">
   <strong>{{remaining}}</strong> {{inflection}} left
 </span>
 <!--- ... additional lines truncated for brevity ... -->
 ```
+{% endraw %}
 
 Add this to the `app/controllers/todos.js` file:
 
-```
+```javascript
 // ... additional lines truncated for brevity ...
 actions: {
 // ... additional lines truncated for brevity ...
@@ -391,7 +405,8 @@ inflection: function() {
 
 Update `app/templates/todos.hbs` with the following code to enable toggling in and out of edit mode:
 
-```
+{% raw %}
+```handlebars
 <!--- ... additional lines truncated for brevity ... -->
 {{#each itemController="todo"}}
   <li {{bind-attr class="isCompleted:completed isEditing:editing"}}>
@@ -406,10 +421,11 @@ Update `app/templates/todos.hbs` with the following code to enable toggling in a
 {{/each}}
 <!--- ... additional lines truncated for brevity ... -->
 ```
+{% endraw %}
 
 And then update our `app/controllers/todo.js` controller:
 
-```
+```javascript
 // ... additional lines truncated for brevity ...
 export default Ember.ObjectController.extend({
   actions: {
@@ -430,7 +446,8 @@ You can now double-click a todo to edit it.
 
 In `app/templates/todos.hbs` change out the static input tag under if editing:
 
-```
+{% raw %}
+```handlebars
 <!--- ... additional lines truncated for brevity ... -->
 {{#if isEditing}}
   {{input class="edit" value=title
@@ -440,10 +457,11 @@ In `app/templates/todos.hbs` change out the static input tag under if editing:
 {{else}}
 <!--- ... additional lines truncated for brevity ... -->
 ```
+{% endraw %}
 
 In `app/controllers/todo.js` add the `acceptChanges` action:
 
-```
+```javascript
 // ... additional lines truncated for brevity ...
 actions: {
   editTodo: function() {
@@ -466,15 +484,17 @@ actions: {
 
 In `app/templates/todos.hbs` update the delete button:
 
-```
+{% raw %}
+```handlebars
 <!--- ... additional lines truncated for brevity ... -->
 <button {{action "removeTodo"}} class="destroy"></button>
 <!--- ... additional lines truncated for brevity ... -->
 ```
+{% endraw %}
 
 In `app/controllers/todo.js` add the `removeTodo` action:
 
-```
+```javascript
 // ... additional lines truncated for brevity ...
 actions: {
   editTodo: function() {
@@ -513,7 +533,8 @@ Inside of `app/templates/todos.hbs` move the entire contents of `<ul id="todo-li
 
 Within `app/templates/todos.hbs` place a Handlebars `{{ "{{outlet" }}}}` helper where the `<ul>` was previously:
 
-```
+{% raw %}
+```handlebars
 <!--- ... additional lines truncated for brevity ... -->
 <section id="main">
   {{outlet}}
@@ -522,10 +543,11 @@ Within `app/templates/todos.hbs` place a Handlebars `{{ "{{outlet" }}}}` helper 
 </section>
 <!--- ... additional lines truncated for brevity ... -->
 ```
+{% endraw %}
 
 In `app/router.js` change the `todos` mapping with an additional empty function parameter so it can accept child routes:
 
-```
+```javascript
 Router.map(function() {
   this.resource('todos', { path: '/' }, function() {
     // additional child routes will go here later
@@ -536,7 +558,7 @@ Router.map(function() {
 
 Add the following code to `app/routes/todos/index.js`:
 
-```
+```javascript
 import Ember from 'ember';
 
 export default Ember.Route.extend({
@@ -550,7 +572,8 @@ export default Ember.Route.extend({
 
 In `app/templates/todos.hbs` convert the `<a>` tag for 'Active' todos into a Handlebars `{{link-to}}` helper:
 
-```
+{% raw %}
+```handlebars
 <!--- ... additional lines truncated for brevity ... -->
 <li>
   <a href="all">All</a>
@@ -563,6 +586,7 @@ In `app/templates/todos.hbs` convert the `<a>` tag for 'Active' todos into a Han
 </li>
 <!--- ... additional lines truncated for brevity ... -->
 ```
+{% endraw %}
 
 Let's generate a our 'active' route:
 
@@ -572,7 +596,7 @@ ember generate route todos/active
 
 In `app/router.js` update the router add the active route under the 'todos' resource and be sure to clean up the 'todos/active' route created by the generator:
 
-```
+```javascript
 import Ember from 'ember';
 import config from './config/environment';
 
@@ -591,7 +615,7 @@ export default Router;
 
 In `app/routes/todos/active.js` implement a matching route:
 
-```
+```javascript
 import Ember from 'ember';
 
 export default Ember.Route.extend({
@@ -610,7 +634,8 @@ export default Ember.Route.extend({
 
 In `app/templates/todos.hbs` convert the `<a>` tag for 'Completed' todos into a Handlebars `{{link-to}}` helper:
 
-```
+{% raw %}
+```handlebars
 <!--- ... additional lines truncated for brevity ... -->
 <li>
   <a href="all">All</a>
@@ -623,6 +648,7 @@ In `app/templates/todos.hbs` convert the `<a>` tag for 'Completed' todos into a 
 </li>
 <!--- ... additional lines truncated for brevity ... -->
 ```
+{% endraw %}
 
 Let's generate a new route for showing the completed tasks with:
 
@@ -632,7 +658,7 @@ ember generate route todos/completed
 
 In `app/router.js` update the router add the 'completed' route under the 'todos' resource and be sure to clean up the 'todos/completed' route created by the generator:
 
-```
+```javascript
 Router.map(function() {
   this.resource('todos', { path: '/' }, function() {
     this.route('active');
@@ -643,7 +669,7 @@ Router.map(function() {
 
 In `app/routes/todos/completed.js` implement a matching route:
 
-```
+```javascript
 import Ember from 'ember';
 
 export default Ember.Route.extend({
@@ -662,7 +688,8 @@ export default Ember.Route.extend({
 
 In `app/templates/todos.hbs` convert the `<a>` tag for 'All' todos into a Handlebars `{{ "{{link-to" }}}}` helper:
 
-```
+{% raw %}
+```handlebars
 <!--- ... additional lines truncated for brevity ... -->
 <li>
   {{#link-to "todos.index" activeClass="selected"}}All{{/link-to}}
@@ -675,12 +702,14 @@ In `app/templates/todos.hbs` convert the `<a>` tag for 'All' todos into a Handle
 </li>
 <!--- ... additional lines truncated for brevity ... -->
 ```
+{% endraw %}
 
 ## Displaying a Button to Remove All Completed Todos
 
 In `app/templates/todos.hbs` update the static `<button>` for clearing all completed todos:
 
-```
+{% raw %}
+```handlebars
 <!--- ... additional lines truncated for brevity ... -->
 {{#if hasCompleted}}
   <button id="clear-completed" {{action "clearCompleted"}}>
@@ -689,10 +718,11 @@ In `app/templates/todos.hbs` update the static `<button>` for clearing all compl
 {{/if}}
 <!--- ... additional lines truncated for brevity ... -->
 ```
+{% endraw %}
 
 In `app/controllers/todos.js` implement the matching properties and a method that will clear completed todos and persist these changes when the button is clicked:
 
-```
+```javascript
 import Ember from 'ember';
 
 export default Ember.ArrayController.extend({
@@ -718,7 +748,8 @@ export default Ember.ArrayController.extend({
 
 In `app/templates/todos.hbs` replace the static checkbox `<input>` with an `{{ "{{input" }}}}`:
 
-```
+{% raw %}
+```handlebars
 <!--- ... additional lines truncated for brevity ... -->
 <section id="main">
   {{outlet}}
@@ -726,10 +757,11 @@ In `app/templates/todos.hbs` replace the static checkbox `<input>` with an `{{ "
 </section>
 <!--- ... additional lines truncated for brevity ... -->
 ```
+{% endraw %}
 
 In `app/controllers/todos.js` implement the matching `allAreDone` property:
 
-```
+```javascript
 // ... additional lines truncated for brevity ...
 allAreDone: function(key, value) {
   return !!this.get('length') && this.isEvery('isCompleted');
@@ -741,7 +773,7 @@ allAreDone: function(key, value) {
 
 Update the `allAreDone` property in `app/controllers/todos.js` to handle both getting and setting behavior:
 
-```
+```javascript
 // ... additional lines truncated for brevity ...
 allAreDone: function(key, value) {
   if (value === undefined) {

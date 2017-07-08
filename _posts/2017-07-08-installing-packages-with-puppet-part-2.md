@@ -27,7 +27,7 @@ and call it `base-apps`. Then we are going to create a single array containing
 all the packages we would like to install. Then we can reference the entire
 array and ensure all those packages are installed.
 
-```
+```ruby
 class base-apps {
 
   $base_apps = [
