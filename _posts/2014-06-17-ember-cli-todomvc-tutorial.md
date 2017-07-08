@@ -130,9 +130,10 @@ Now copy the entire contents of the `app/templates/application.hbs` file into a 
 
 Then replace the entire contents of the `app/templates/application.hbs` file with:
 
-```
+{% raw %}
+~~~html
 {{outlet}}
-```
+{% endraw %}
 
 Now go back to your web browser and make sure everything still loaded okay.
 
@@ -221,7 +222,8 @@ export default Ember.Route.extend({
 
 Now we need to add some handlebar code to our `app/templates/todos.hbs` template so that it can dynamically load the contents of our fixture.
 
-```
+{% raw %}
+~~~html
 <!--- ... additional lines truncated for brevity ... -->
 <ul id="todo-list">
   {{ "{{#each" }}}}
@@ -233,13 +235,14 @@ Now we need to add some handlebar code to our `app/templates/todos.hbs` template
   {{ "{{/each" }}}}
 </ul>
 <!--- ... additional lines truncated for brevity ... -->
-```
+{% endraw %}
 
 ## Displaying a Model's Complete State
 
 Update the `<li>` tag in `app/templates/todos.hbs`:
 
-```
+{% raw %}
+~~~html
 <!--- ... additional lines truncated for brevity ... -->
 <li {{bind-attr class="isCompleted:completed"}}>
   <input type="checkbox" class="toggle">
@@ -247,23 +250,24 @@ Update the `<li>` tag in `app/templates/todos.hbs`:
   <button class="destroy"></button>
 </li>
 <!--- ... additional lines truncated for brevity ... -->
-```
+{% endraw %}
 
 ## Creating a New Model Instance
 
 At the top of `app/templates/todos.hbs` replace the new todo `<input>` with an `{{ "{{input" }}}}` helper:
 
-```
+{% raw %}
+~~~html
 <!--- ... additional lines truncated for brevity ... -->
 <h1>todos</h1>
 {{input type="text" id="new-todo" placeholder="What needs to be done?"
           value=newTitle action="createTodo"}}
 <!--- ... additional lines truncated for brevity ... -->
-```
+{% endraw %}
 
 Inside of the `app/controllers/` folder create a new file called: `todos.js` and put the following code inside of it:
 
-```
+{% highlight javascript %}
 import Ember from 'ember';
 
 export default Ember.ArrayController.extend({
@@ -287,13 +291,14 @@ export default Ember.ArrayController.extend({
     }
   }
 });
-```
+{% endhighlight %}
 
 ## Marking a Model as Complete or Incomplete
 
 Inside the `app/templates/todos.hbs` template replace the `<input>` tag for the checkbox with:
 
-```
+{% raw %}
+~~~html
 {{#each}}
   <li {{bind-attr class="isCompleted:completed"}}>
     {{input type="checkbox" checked=isCompleted class="toggle"}}
@@ -301,7 +306,7 @@ Inside the `app/templates/todos.hbs` template replace the `<input>` tag for the 
     <button class="destroy"></button>
   </li>
 {{/each}}
-```
+%{ endraw %}
 
 Inside of the `app/controllers/` folder create a new file called: `todo.js`. And place the following code inside:
 
@@ -328,13 +333,14 @@ export default Ember.ObjectController.extend({
 
 Update the static count inside the `todo-count` span in the `app/templates/todos.hbs` template:
 
-```
+{% raw %}
+~~~html
 <!--- ... additional lines truncated for brevity ... -->
 <span id="todo-count">
   <strong>{{remaining}}</strong> {{inflection}} left
 </span>
 <!--- ... additional lines truncated for brevity ... -->
-```
+{% endraw %}
 
 Add this to the `app/controllers/todos.js` file:
 
@@ -359,7 +365,8 @@ inflection: function() {
 
 Update `app/templates/todos.hbs` with the following code to enable toggling in and out of edit mode:
 
-```
+{% raw %}
+~~~html
 <!--- ... additional lines truncated for brevity ... -->
 {{#each itemController="todo"}}
   <li {{bind-attr class="isCompleted:completed isEditing:editing"}}>
@@ -373,7 +380,7 @@ Update `app/templates/todos.hbs` with the following code to enable toggling in a
   </li>
 {{/each}}
 <!--- ... additional lines truncated for brevity ... -->
-```
+{% endraw %}
 
 And then update our `app/controllers/todo.js` controller:
 
@@ -398,23 +405,25 @@ You can now double-click a todo to edit it.
 
 In `app/templates/todos.hbs` change out the static input tag under if editing:
 
-```
+{% raw %}
+~~~html
 <!--- ... additional lines truncated for brevity ... -->
 {{#if isEditing}}
   {{input class="edit" value=title focus-out="acceptChanges" insert-newline="acceptChanges" autofocus="autofocus"}}
 {{else}}
 <!--- ... additional lines truncated for brevity ... -->
-```
+{% endraw %}
 
 ## Deleting a Model
 
 In `app/templates/todos.hbs` update the delete button:
 
-```
+{% raw %}
+~~~html
 <!--- ... additional lines truncated for brevity ... -->
 <button {{action "removeTodo"}} class="destroy"></button>
 <!--- ... additional lines truncated for brevity ... -->
-```
+{% endraw %}
 
 In `app/controllers/todo.js` add the `removeTodo` action:
 
@@ -451,7 +460,8 @@ Inside of `app/templates/todos.hbs` move the entire contents of `<ul id="todo-li
 
 Within `app/templates/todos.hbs` place a Handlebars `{{ "{{outlet" }}}}` helper where the `<ul>` was previously:
 
-```
+{% raw %}
+~~~html
 <!--- ... additional lines truncated for brevity ... -->
 <section id="main">
   {{outlet}}
@@ -459,7 +469,7 @@ Within `app/templates/todos.hbs` place a Handlebars `{{ "{{outlet" }}}}` helper 
   <input type="checkbox" id="toggle-all">
 </section>
 <!--- ... additional lines truncated for brevity ... -->
-```
+{% endraw %}
 
 In `app/router.js` change the `todos` mapping with an additional empty function parameter so it can accept child routes:
 

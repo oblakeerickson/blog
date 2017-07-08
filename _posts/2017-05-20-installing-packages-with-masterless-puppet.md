@@ -4,8 +4,9 @@ title: "Installing Packages with Masterless Puppet"
 date: 2017-05-20 06:00:00
 ---
 
+
 My first post on [Masterless
-Puppet](/2017/03/06/masterless-puppet-on-ubuntu-16-04.html)
+Puppet]({{ site.baseurl }}{% post_url 2017-03-06-masterless-puppet-on-ubuntu-16-04 %})
 walked us through setting up puppet in a masterless setup, but we didn't
 actually use it to install any software package or files to configure our
 server, which is the whole point of puppet, so let's do that now.
@@ -61,3 +62,4 @@ environment with puppet. I currently have a desktop and a laptop and I would
 like to be able to keep them in sync so that whenever I want to get work done
 on my laptop I can actually get work done and not have to configure it so that
 it is setup just like my desktop.
+
