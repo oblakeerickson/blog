@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "PHP Database Migrations"
+date:   2014-08-18 01:00:00 -0600
+---
+
 # PHP Database Migrations
 
 In the legacy codebase that I'm working with we currently are using a very simple and very manual method of performing database migrations. Basically we are just keeping a timestamped file with the sql code that needs to be performed. This by the way is much better than not having anything.
