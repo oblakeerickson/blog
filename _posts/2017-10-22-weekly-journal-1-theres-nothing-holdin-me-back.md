@@ -53,7 +53,7 @@ ship your logs off-site but you want them all in one place.
 
 For whatever reason I'm currently working on lots of little projects and I've
 been putting them on hold for the most part because I've been so busy at work. I
-mostly have these little personal projects so that I can practive "Deliberate
+mostly have these little personal projects so that I can practice "Deliberate
 Practice" and get better at my programming craft.
 
 This weekend I was able to make progress on TinyTodo, and SkillSift. I'm now for
