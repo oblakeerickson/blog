@@ -27,13 +27,13 @@ how Hiera works.
 
 ### SkillSift Update
 
-This week I setup SSl for the main [SkillSift Website][2] and for the [SkillSift
-App][3], which was suprisingly easy. I also started working on setting up a
-Jekyll blog that will replace the current home page which is just a single
-`index.html` file. I feel like every successful product/bussiness needs a blog
-that updates regularly, so I figured I should start now even though the app
-isn't anywhere close to being finished. I also worked on the SkillSift app a bit
-and started working on the login/signup functionality.
+This week I setup SSl for the main [SkillSift Website][2] which was suprisingly
+easy. I also started working on setting up a Jekyll blog that will replace the
+current home page which is just a single `index.html` file. I feel like every
+successful product/bussiness needs a blog that updates regularly, so I figured I
+should start now even though the app isn't anywhere close to being finished. I
+also worked on the SkillSift app a bit and started working on the login/signup
+functionality.
 
 
 ### Personal project updates
@@ -95,7 +95,6 @@ existed. Here are two that I found this week:
 
 [1]: https://hub.docker.com/r/discourse/elasticsearch-aws/
 [2]: https://www.skillsift.com
-[3]: https://app.skillsift.com
 [4]: http://artofproductpodcast.com/episode-21
 [5]: https://www.refactoringrails.io/buy
 [6]: https://emberweekend.com/episodes/progress-report
