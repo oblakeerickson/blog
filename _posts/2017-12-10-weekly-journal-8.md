@@ -30,7 +30,7 @@ just better than others.
 One of the podcast episodes that I listened to this week was [Under The Radar -
 108: Punch-List Mode][1]. A great episode about finishing that remaining 10% of
 things on a project that seem to take another 90% of the time. It was kind of
-perfect timing for thie episode as I was trying to polish up the Load Tester I
+perfect timing for this episode as I was trying to polish up the Load Tester I
 was working on and getting it ready to "ship".
 
 [1]: https://overcast.fm/+Fgm3wvRAE
