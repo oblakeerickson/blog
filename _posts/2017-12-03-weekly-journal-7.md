@@ -5,7 +5,7 @@ date: 2017-12-03 06:00:00
 ---
 
 I feel like it's been a crazy last few weeks, probably mostly because we hired
-some contractors to fiinsh the nightmare we started by trying to remodle our
+some contractors to finish the nightmare we started by trying to remodel our
 bathroom. They've been working on it almost everyday for the past couple of
 weeks, but they will finally be done this week! I'm just ready to not have
 people in my house and to not have to go to Lowes anymore. I am so glad that we
