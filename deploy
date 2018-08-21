@@ -1,0 +1,2 @@
+#!/bin/bash
+ssh root@blog.blakeerickson.com ./deploy_blog
