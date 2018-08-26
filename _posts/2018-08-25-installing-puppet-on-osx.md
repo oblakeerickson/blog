@@ -30,7 +30,7 @@ then turn off the puppet agent with this command:
 
 You can also verify that puppet is installed by running:
 
-   puppet --version
+    puppet --version
 
 Now you can browse to `/etc/puppetlabs` and edit your puppet config.
 
