@@ -27,21 +27,9 @@ exercise. I feel like I have better days when I work out so I've been trying to
 make a good habbit of going regularly.
 
 One thing that I've been focusing on though is getting enough sleep every night.
-Even if that means I don't go to the gym.
-Maybe its just because I'm over 30 now, but I've definetly realized the benefits
-of getting a full nights rest because I'm way more productive at work and I'm way more
-pleasant to be around.
-
-Currently I'm studying for my 70-532 Azure exam. Honestly though I've been
-having a hard time being consistent with my studying which basically means I'm
-not making as much progress as I would like and I'm still not certified.
-
-Growing up my bedroom looked something like:
-
-![Image](https://blakestagram.blob.core.windows.net/blog/DSCF0008.JPG)
-
-While I currently don't have that many computers in my home, I hope that I can
-slowly work up a vintage collection like [this](https://blog.pizzabox.computer/).
+Even if that means I don't go to the gym.  Maybe its just because I'm over 30
+now, but I've definetly realized the benefits of getting a full nights rest
+because I'm way more productive at work and I'm way more pleasant to be around.
 
 Thank you for stopping by and reading my blog!
 
