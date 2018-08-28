@@ -12,7 +12,8 @@ To clone git repositories using puppet on OS X I'm doing:
 ```
 exec { 'git clone git@github.com:org/repo.git /full-path/repo':
   path    => '/usr/local/bin',
-  user    => "blake"
+  user    => 'blake'
+  creates => '/full-path/repo'
 }
 ```
 
