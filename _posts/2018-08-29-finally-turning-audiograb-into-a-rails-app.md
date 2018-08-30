@@ -4,7 +4,7 @@ title: "Finally Turning AudioGrab Into a Rails App"
 date: 2018-08-26 06:00:00
 ---
 
-#### 6:45
+#### 6:45 PM
 
 Okay today I'm finally going to make a Rails app for AudioGrab. I think creating
 a cli app was a great first step, but having a rails app that I could have a
