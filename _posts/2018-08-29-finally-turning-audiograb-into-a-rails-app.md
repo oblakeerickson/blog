@@ -4,12 +4,12 @@ title: "Finally Turning AudioGrab Into a Rails App"
 date: 2018-08-26 06:00:00
 ---
 
-### 6:45
+#### 6:45
 
 Okay today I'm finally going to make a Rails app for AudioGrab. I think creating
 a cli app was a great first step, but having a rails app that I could have a
 bookmarklet talk to is what I really want. The [original audiograb][orig] I made
-back in 2013. My current [cli version][current] I just opened sourced.
+back in 2013. My current [cli version][curr] I just opened sourced.
 
 My goal for tonight is to make the most basic rails app and get it deployed to
 production. All I want it to do is have an input box for the youtube url with a
