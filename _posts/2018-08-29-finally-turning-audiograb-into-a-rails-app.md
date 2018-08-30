@@ -19,5 +19,18 @@ convert it to mp3, and then upload it to my overcast account.
 This means that I won't have user accounts yet, but maybe I can just protect it
 with basic auth or something.
 
+#### 7:08 PM
+
+Okay I just ran `rails new audio_grab_app` to generate my new app, ran `rails
+server` to verify that it runs, and now I'm going to push it up to github.
+
+Okay I created my public repo on github and added a license.
+
+Then I ran `git remote add origin <repo-name>`. Followed by `git pull --rebase
+origin master` to pull down my license. Then I committed and pushed my current
+changes.
+
+Okay now its dinner time.
+
 [orig]: https://github.com/oblakeerickson/audiograb
 [curr]: https://github.com/oblakeerickson/audio_grab
