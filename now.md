@@ -6,8 +6,6 @@ permalink: /now
 
 Here is what I'm currently focusing on:
 
- - Reading Masters of Doom (again)
- - Losing a few more pounds so that I weigh under 169.9 pounds
- - Sleeping 7+ hours every night
+ - Heading to Singapore for the yearly Discourse Team meetup!
 
-<small>Updated: 20180912</small>
+<small>Updated: 20180919</small>
