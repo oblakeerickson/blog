@@ -6,6 +6,8 @@ permalink: /now
 
 Here is what I'm currently focusing on:
 
- - Heading to Singapore for the yearly Discourse Team meetup!
+ - Going to the gym most weekdays
+ - Eating less carbs
+ - Finding time for deliberate practice
 
-<small>Updated: 20180919</small>
+<small>Updated: 20181028</small>
