@@ -6,10 +6,10 @@ permalink: /now
 
 Here is what I'm currently up to:
 
- - Going to the gym most weekdays (I'm also taking a yoga class a couple times a
-   week!)
- - Eating less carbs and trying to not eat late at night
+ - Working out from home in my garage to save driving time to the gym (I'm
+   slowly gathering gym equipment)
  - Finding time for deliberate practice
- - Building a new house which we hopefully can move into in a couple of months
+ - Just moved into a new house so trying to get settled in
+ - Snowboarding
 
-<small>Updated: 20181031</small>
+<small>Updated: 20190109</small>
