@@ -6,6 +6,7 @@ permalink: /now
 
 Here is what I'm currently up to:
 
-- Making a daily public commit on GitHub
+It's summer so when I'm not working I'll probably be out hiking or mountain biking
+with my family!
 
-<small>Updated: 20190502</small>
+<small>Updated: 20190611</small>
