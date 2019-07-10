@@ -44,7 +44,7 @@ which will save a session token in my cookie file. And then I can run another
 cURL command using the cookie file to fetch the data I'm after. Pretty cool.
 
 Now my next steps are to do this all in ruby. After that I'm hoping I can add
-this to my private Discourse instance some how so that I can be awarded a custom
+this to my private Discourse instance somehow so that I can be awarded a custom
 gym badge every day I go or for going so many days in a row.
 
 [1]: https://ec.haxx.se/http-cookies.html
