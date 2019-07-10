@@ -7,7 +7,7 @@ date: 2019-07-10 01:00:00 -0600
 Just for fun I want to automatically track if I go to the gym or not. Every time
 I go to Golds Gym I have to scan my card that I keep on my key chain so there is
 an electronic record of me going to the gym or not. I did not know about this
-when I signed up, but Golds Gym does have a crappy website for managing your
+when I signed up, but Golds Gym does have a [crappy website][2] for managing your
 membership and on there you can see a record of every time you have checked into
 the gym.
 
@@ -48,3 +48,4 @@ this to my private Discourse instance some how so that I can be awarded a custom
 gym badge every day I go or for going so many days in a row.
 
 [1]: https://ec.haxx.se/http-cookies.html
+[2]: https://mico.myiclubonline.com/iclub/members/signin.htm
