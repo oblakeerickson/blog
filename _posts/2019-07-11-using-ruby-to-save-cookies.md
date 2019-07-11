@@ -11,8 +11,9 @@ I found [this stackoverflow answer][2] that talks about using [http-cookie][3]
 which doesn't look like it has been updated in over 3 years, but it did work
 just fine.
 
-I created the [golds_checkin][4] for the ruby code of this project. Currently it
-is just an app.rb file, but I will most likely turn it into an actual ruby gem.
+I created the [golds_checkin][4] repo to store the ruby code of this project.
+Currently it is just an app.rb file, but I will most likely turn it into an
+actual ruby gem.
 
 Here is the output of my app.rb file:
 
@@ -70,12 +71,13 @@ subsequent requests. Once we are logged in then we can call 'fetch_checkins'
 which I have set to only fetch today's date. This call reads from the cookie jar
 in order to make an authenticated request.
 
-From these two posts (this one and [yesterdays][1]) you can start to see my process for making an app. I
-usually start with just playing around on the command line. Then I translate all
-of that knowledge into a simple app.rb file. From there I think it kind of
-depends what my end goal is, but then the app.rb file evolves in some way where
-it no longer just lives on my local computer, but gets turned into a ruby gem to
-be used in another project, or it evovles into a larger web application.
+From these two posts (this one and [yesterdays][1]) you can start to see my
+process for making an app. I usually start with just playing around on the
+command line. Then I translate all of that knowledge into a simple app.rb file.
+From there I think it kind of depends what my end goal is, but then the app.rb
+file evolves in some way where it no longer just lives on my local computer, but
+gets turned into a ruby gem to be used in another project, or it evovles into a
+larger web application.
 
 [1]: https://blog.blakeerickson.com/using-curl-to-save-cookies
 [2]: https://stackoverflow.com/a/32868560/588458
