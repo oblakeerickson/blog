@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Using cURL to save cookies"
+title: "Using cURL to Save Cookies"
 date: 2019-07-10 01:00:00 -0600
 ---
 
