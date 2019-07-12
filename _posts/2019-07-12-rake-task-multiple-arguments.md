@@ -25,7 +25,7 @@ list of tasks that is knows about:
 rake print_hello      # A sample task
 ```
 
-And we can all this task with the following command:
+And we can call this task with the following command:
 
 ``` text
 rake print_hello
@@ -49,21 +49,21 @@ rake say_hello[name]  # Say hi
 ```
 
 Unlike command line bash scripts or even calling a ruby script with multiple
-args you can't just separate them by spaces like this:
+args you can't just separate them by spaces in a rake task like this:
 
 ``` text
 ruby my-sample-script.rb arg1 arg2 arg3
 ```
 
-Rake task arguments go inside brackets like this:
+Rake task arguments go inside brackets:
 
 ``` text
 rake say_hello[blake]
 Hello blake
 ```
 
-Now how do we specify multiple arguments? by specifying each one inside of the
-task declaration like this:
+Now how do we specify multiple arguments? By specifying each one inside of the
+task declaration:
 
 ``` ruby
 desc "Two args"
@@ -73,16 +73,16 @@ end
 ```
 
 And you can run it by specifying args in a comma separated list (with no
-spaces!) like this:
+spaces!):
 
 ``` text
 rake two_args[blake,erickson]
 Hello blake erickson
 ```
 
-Now onto the tricky part that I'm still not 100% satisfied with, but is working,
-is how do you pass in an arbitrary amount of arguments to a rake task? For my case
-it need to pass in a list of values, but I'm not sure how many there will be.
+Now onto the tricky part that I'm still not 100% satisfied with, is how do you
+pass in an arbitrary amount of arguments to a rake task? For my case I need to
+pass in a list of values, but I'm not sure how many there will be.
 
 To do this you will not specify the args like we did before inside of the task
 declaration. The problem with this is now it won't show the args when running
@@ -110,7 +110,7 @@ orange
 mango
 ```
 
-Like I said I'm not totally satisfied with specifying an arbitrary amount of
+I'm not totally satisfied with specifying an arbitrary amount of
 arguments this way, but it does get the job done. Hopefully this helps you in
 your [rake][1] task adventures.
 
