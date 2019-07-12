@@ -4,9 +4,9 @@ title:  "Rake Tasks and Helper Methods"
 date:   2014-01-24 01:00:00 -0600
 ---
 
-UPDATE**: I made a big mistake in this post, read why [here](http://blakeerickson.com/2014/01/25/lib-directory).
+UPDATE**: I made a big mistake in this post, read why [here](https://blog.blakeerickson.com/lib-directory).
 
-As I mentioned [two weeks ago](http://blakeerickson.com/2014/01/10/its-okay-to-start-over) I started to rewrite my [longest streak app](https://github.com/oblakeerickson/longest_streak) so that it could be a Rails app and not just a command line ruby application. I'm not really rewriting it per say, more just putting my existing ruby code into the rails structure. Yesterday I worked on setting up my models. I have two right now, a user model and a contributions model. And this morning I worked on setting up a rake task for connecting to the GitHub API and getting user data. I was able to get my Rake Task to talk to my User model and to also talk to two helper methods that I created.
+As I mentioned [two weeks ago](https://blog.blakeerickson.com/its-okay-to-start-over) I started to rewrite my [longest streak app](https://github.com/oblakeerickson/longest_streak) so that it could be a Rails app and not just a command line ruby application. I'm not really rewriting it per say, more just putting my existing ruby code into the rails structure. Yesterday I worked on setting up my models. I have two right now, a user model and a contributions model. And this morning I worked on setting up a rake task for connecting to the GitHub API and getting user data. I was able to get my Rake Task to talk to my User model and to also talk to two helper methods that I created.
 
 One of my Helpers is used for setting up my connection to GitHub called *connection_helper.rb*:
 
