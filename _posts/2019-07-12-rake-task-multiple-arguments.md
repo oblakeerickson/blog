@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Rake Task with an Arbitrary Amount of Arguments"
-date: 2019-07-11 01:00:00 -0600
+date: 2019-07-12 01:00:00 -0600
 ---
 
 I'm currently working on a rake task where I need to pass in an arbitrary amount
