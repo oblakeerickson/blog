@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blake Erickson</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 3rem 0 0;
+      font-family: sans-serif;
+      background: #fafafa;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    header, nav, main, footer {
+      width: 90%;
+      max-width: 600px;
+      margin: 1rem auto;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+    nav a {
+      text-decoration: none;
+      color: #333;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      transition: background 0.2s;
+    }
+    nav a:hover {
+      background: rgba(0,0,0,0.05);
+    }
+    .profile-pic {
+      display: block;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin: 0 auto 1rem;
+      object-fit: cover;
+      border: 2px solid #ccc;
+    }
+    h1, p {
+      text-align: center;
+    }
+    p {
+      line-height: 1.5;
+      margin-bottom: 2rem;
+    }
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .social-links svg {
+      width: 24px;
+      height: 24px;
+      fill: #333;
+    }
+    .social-links a {
+      display: inline-block;
+      transition: transform 0.2s, opacity 0.2s;
+    }
+    .social-links a:hover {
+      transform: translateY(-2px);
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img 
+      src="https://avatars.githubusercontent.com/u/1490496?v=4" 
+      alt="Profile" 
+      class="profile-pic"
+    />
+    <h1>Hi! I'm Blake Erickson.</h1>
+    <p>I'm a software developer at Discourse. I love programming, working out, and skiing with my family.</p>
+  </header>
+
+  <nav>
+    <a href="/posts">Posts</a>
+    <a href="/now">Now</a>
+    <a href="/about">About</a>
+    <a href="/feed.xml">RSS</a>
+  </nav>
+
+  <main>
+    <div class="social-links">
+      <!-- X -->
+      <a href="https://x.com/oblakeerickson" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24">
+          <path d="M14.095479,10.316482L22.286354,1h-1.940718l-7.115352,8.087682L7.551414,1H1l8.589488,12.231093L1,23h1.940717  
+            l7.509372-8.542861L16.448587,23H23L14.095479,10.316482z M11.436522,13.338465l-0.871624-1.218704l-6.924311-9.68815h2.981339  
+            l5.58978,7.82155l0.867949,1.218704l7.26506,10.166271h-2.981339L11.436522,13.338465z"/>
+        </svg>
+      </a>
+      <!-- Instagram -->
+      <a href="https://instagram.com/oblakeerickson" target="_blank" rel="noopener">
+        <svg viewBox="0 0 56.7 56.7">
+          <g>
+            <path d="M28.2,16.7c-7,0-12.8,5.7-12.8,12.8s5.7,12.8,12.8,12.8S41,36.5,41,29.5S35.2,16.7,28.2,16.7z M28.2,37.7
+              c-4.5,0-8.2-3.7-8.2-8.2s3.7-8.2,8.2-8.2s8.2,3.7,8.2,8.2S32.7,37.7,28.2,37.7z"/>
+            <circle cx="41.5" cy="16.4" r="2.9"/>
+            <path d="M49,8.9c-2.6-2.7-6.3-4.1-10.5-4.1H17.9c-8.7,0-14.5,5.8-14.5,14.5v20.5c0,4.3,1.4,8,4.2,10.7c2.7,2.6,6.3,3.9,10.4,3.9
+              h20.4c4.3,0,7.9-1.4,10.5-3.9c2.7-2.6,4.1-6.3,4.1-10.6V19.3C53,15.1,51.6,11.5,49,8.9z M48.6,39.9c0,3.1-1.1,5.6-2.9,7.3
+              s-4.3,2.6-7.3,2.6H18c-3,0-5.5-0.9-7.3-2.6C8.9,45.4,8,42.9,8,39.8V19.3c0-3,0.9-5.5,2.7-7.3c1.7-1.7,4.3-2.6,7.3-2.6h20.6
+              c3,0,5.5,0.9,7.3,2.7c1.7,1.8,2.7,4.3,2.7,7.2V39.9L48.6,39.9z"/>
+          </g>
+        </svg>
+      </a>
+      <!-- GitHub -->
+      <a href="https://github.com/oblakeerickson" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24">
+          <path d="M12 .5a11.5 11.5 0 0 0-3.64 22.42c.57.1.78-.25.78-.55v-1.9c-3.18.7-3.86-1.55-3.86-1.55-.52-1.3-1.27-1.65-1.27-1.65-1.04-.7.08-.68.08-.68 1.15.08 1.76 1.19 1.76 1.19 1.02 1.75 2.67 1.24 3.32.95.1-.74.4-1.24.72-1.53-2.54-.29-5.22-1.27-5.22-5.65 0-1.25.45-2.27 1.2-3.07-.12-.3-.52-1.52.12-3.16 0 0 .97-.31 3.2 1.17a11.15 11.15 0 0 1 2.92-.39c.99 0 1.99.13 2.92.39 2.23-1.48 3.2-1.17 3.2-1.17.64 1.64.24 2.86.12 3.16.75.8 1.2 1.82 1.2 3.07 0 4.4-2.69 5.35-5.25 5.63.41.35.76 1.05.76 2.13v3.16c0 .31.21.66.79.55A11.51 11.51 0 0 0 12 .5z"/>
+        </svg>
+      </a>
+    </div>
+  </main>
+
+  <footer></footer>
+
+</body>
+</html>
+
