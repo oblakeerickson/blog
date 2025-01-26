@@ -6,16 +6,15 @@ permalink: /now
 
 Here is what I'm currently up to:
 
-It's Winter so when I'm not working I'll probably be up in the mountains
-snowboarding with my Wife and 2 kiddos.
+It's winter so when I'm not working I'm up in the mountains
+skiing with my wife and 2 kiddos.
 
-As a break from my keyboard I'm really enjoying going to CrossFit!
+As a snowboarder I'm learning how to ski this year. The first two days went just okay.
+The third day I rocked it and could finally ski the green and blue runs with confidence.
+Jury is still out if I'll stick to skiing or go back to snowboarding, but I'm enjoying
+pushing myself learning a new skill.
 
-For deliberate practice I'm working on mastering Ember.
+We just got the Rogue Echo Rower which has been a great addition to our home gym
+and a great way to get my heart rate up.
 
-I'm also trying out using Discourse as a Blog at [https://blake.app][1], so
-everything here might move over soon.
-
-<small>Updated: 20200212</small>
-
-[1]: https://blake.app
+<small>Updated: 20250126</small>
