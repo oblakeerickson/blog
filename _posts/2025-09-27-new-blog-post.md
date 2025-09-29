@@ -5,7 +5,6 @@ date: 2025-09-27 01:00:00 -0600
 ---
 
 There has been a lot of chatter about [Omarchy][0] and how amazing it is. I'm sure it is great, but I currently have a brand new 16" M4 MacBook Pro that I love and every time I've purchased a non-Apple laptop I always regret it for various reasons. Usually it ends up being the trackpad, fan noise, battery life, or some audio issue with crappy speakers or terrible mic. I'm not against trying Omarchy on some other spare computer I have, but for now I'm sticking with my trusty MacBook Pro.
-
 I've been pretty lazy lately with my dev setup and I have not been using vim, a fancy terminal, or any window manager. While things were working fine with my current setup I was definitely starting to feel the pain of managing windows when I had 5 different Cursor windows open, many different browsers open, and many different terminals. Basically it was super difficult to find the specific application window and using "Mission Control" was very messy. I even shared my screen once on a work call to demo something and my coworkers got to see a glimpse of the craziness of my work environment. I wasn't really embarrassed by it, but it made me realized how chaotic my single mac workspace was getting.
 
 I've been looking to improve my computer setup without feeling like I have to ditch my mac and switch to Omarchy even though it is the cool thing at the moment.
@@ -39,6 +38,14 @@ I also use homebrew as the macOS package manager, but I've always been using tha
 
 And that's my current developer setup on macOS. I'm sure I'll keep expanding it to include more [keyboard-everything options][7], but for now I've been pretty happy with my setup and sticking with my trusty MacBook.
 
+#### UPDATE 2025-09-29
+
+I just discovered this great post about [dhh bashing on programmers who use Windows][8] back in 2008. So not much has really changed. Just a different flavor of OS to hate on.
+
+I absolutely love this quote in response which sums up exactly my original intent of this blog post:
+
+> **Don’t waste time arguing about the character select screen.** Results speak loudest. Show the world what you can do in your programming environment of choice.
+
 [0]: https://omarchy.org/
 [1]: https://www.lazyvim.org/
 [2]: https://github.com/folke/lazy.nvim
@@ -47,3 +54,4 @@ And that's my current developer setup on macOS. I'm sure I'll keep expanding it 
 [5]: https://github.com/tmux/tmux/wiki
 [6]: https://neovim.io/
 [7]: https://community.folivora.ai/t/bringing-omarchy-to-macos-using-the-majestic-btt/44881
+[8]: https://blog.codinghorror.com/douchebaggery/
