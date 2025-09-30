@@ -4,7 +4,10 @@ title: "Omarchy for macOS?"
 date: 2025-09-27 01:00:00 -0600
 ---
 
-There has been a lot of chatter about [Omarchy][0] and how amazing it is. I'm sure it is great, but I currently have a brand new 16" M4 MacBook Pro that I love and every time I've purchased a non-Apple laptop I always regret it for various reasons. Usually it ends up being the trackpad, fan noise, battery life, or some audio issue with crappy speakers or terrible mic. I'm not against trying Omarchy on some other spare computer I have, but for now I'm sticking with my trusty MacBook Pro.
+There has been a lot of chatter about [Omarchy][0] and how amazing it is. I'm sure it is great, but I currently have a brand new 16" M4 MacBook Pro that I love and every time I've purchased a non-Apple laptop I always regret it for various reasons. Usually it ends up being the trackpad, fan noise, battery life, or some audio issue with crappy speakers or terrible mic.
+
+I'm not against trying Omarchy on some other spare computer I have, but for now I'm sticking with my trusty MacBook Pro for my main computer.
+
 I've been pretty lazy lately with my dev setup and I have not been using vim, a fancy terminal, or any window manager. While things were working fine with my current setup I was definitely starting to feel the pain of managing windows when I had 5 different Cursor windows open, many different browsers open, and many different terminals. Basically it was super difficult to find the specific application window and using "Mission Control" was very messy. I even shared my screen once on a work call to demo something and my coworkers got to see a glimpse of the craziness of my work environment. I wasn't really embarrassed by it, but it made me realized how chaotic my single mac workspace was getting.
 
 I've been looking to improve my computer setup without feeling like I have to ditch my mac and switch to Omarchy even though it is the cool thing at the moment.
