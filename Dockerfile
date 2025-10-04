@@ -27,4 +27,4 @@ ENV HOME=/tmp \
 WORKDIR /site
 
 # Default command: install gems and run jekyll
-CMD ["bash","-lc","bundle _1.16.1_ install && bundle _1.16.1_ exec jekyll serve --host 0.0.0.0 --port 4000 --watch"]
+CMD ["bash","-lc","bundle _1.16.1_ install && bundle _1.16.1_ exec jekyll serve --host 0.0.0.0 --port 4000 --drafts --watch"]
