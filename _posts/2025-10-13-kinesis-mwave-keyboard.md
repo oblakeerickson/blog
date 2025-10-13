@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "I Finally Got a Split Layout Keyboard"
-date: 2025-10-04 01:00:00 -0600
+date: 2025-10-13 01:00:00 -0600
 ---
 
 ![Kinesis mWave](/assets/images/keyboard.png)
