@@ -22,7 +22,7 @@ url: "https://blog.blakeerickson.com" # the base hostname & protocol for your si
 twitter_username: oblakeerickson
 github_username:  oblakeerickson
 instagram_username: oblakeerickson
-google_analytics: UA-42191832-1
+google_analytics:
 permalink: "/:title"
 
 # Build settings
