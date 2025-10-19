@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Recourss Edit Feeds"
-date: 2025-10-17 01:00:00 -0600
+date: 2025-10-18 01:00:00 -0600
 ---
 
 ![recourss-edit-feed](/assets/images/edit-feed.png)
